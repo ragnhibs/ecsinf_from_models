@@ -76,7 +76,7 @@ for model in model_list:
 pd.options.display.float_format = '{:,.2f}'.format
 #summary_all = summary_all.rename(index=scen_list_out)
 print(summary_all)
-
+summary_all.to_csv('Figures/pattern.csv')
 
 
 axs.axvspan(0,1, alpha=0.5, color='lightgray',zorder=-10)
@@ -86,7 +86,7 @@ axs.set_xlim(-1.6,3)
 axs.set_xticks([0,0.5,1,1.5,2,2.5,3])
 #axs.set_ylim(-6,antscen+1)
 
-axs.set_xlabel(' $\\alpha^\'$ \"Pattern effect\"  [W m$^{-2}$  K^${-1}$]') 
+axs.set_xlabel(' $\\alpha^\'$ \"Pattern effect\"  [W m$^{-2}$  K$^{-1}$]') 
 
 plt.legend(loc='upper right',frameon=False)
 plt.savefig('Figures/pattern.png')
