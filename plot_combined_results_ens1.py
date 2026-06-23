@@ -18,10 +18,10 @@ def plot_obs_temp():
         data_nh = pd.read_csv(filepath_obs + file_nh,index_col=0)
         if en == ens:
             axs[1,m].plot((data_nh['anomaly']+data_sh['anomaly'])*0.5,linewidth=1,
-                        linestyle='-',color='black',label='"Obs"') 
+                        linestyle='-',color='black',label='"obs."') 
         elif en==2: 
             axs[1,m].plot((data_nh['anomaly']+data_sh['anomaly'])*0.5,linewidth=0.5,zorder=-10,
-                          linestyle='-',color='gray',label='other "Obs."')
+                          linestyle='-',color='gray',label='other "obs."')
         else: 
             axs[1,m].plot((data_nh['anomaly']+data_sh['anomaly'])*0.5,linewidth=0.5,zorder=-10,
                           linestyle='-',color='gray')
@@ -38,8 +38,8 @@ def plot_temp():
     
     #Global
     axs[1,m].fill_between(yearlist, np.percentile(post_temp_glob.values,5, axis=0),
-                        np.percentile(post_temp_glob.values, 95, axis=0), linewidth=0.25,color='red', alpha=0.3,label='90 CI')
-    axs[1,m].plot(yearlist,np.percentile(post_temp_glob.values,50, axis=0),color='red',label='Posteriori mean')
+                        np.percentile(post_temp_glob.values, 95, axis=0), linewidth=0.25,color='red', alpha=0.3,label='90 C.I.')
+    axs[1,m].plot(yearlist,np.percentile(post_temp_glob.values,50, axis=0),color='red',label='Posterior mean')
     
 
 def plot_ohc_obs():
@@ -50,9 +50,9 @@ def plot_ohc_obs():
         cmip_0_700 = pd.read_csv('./observations/OHC/'+file_cmip,index_col=0)
 
         if en == ens:
-            axs[2,m].plot(cmip_0_700+cmip_700_bot,linewidth = 1,linestyle='-',color='black', label='"Obs."')
+            axs[2,m].plot(cmip_0_700+cmip_700_bot,linewidth = 1,linestyle='-',color='black', label='"obs."')
         elif en == 2:
-            axs[2,m].plot(cmip_0_700+cmip_700_bot,linewidth = 0.5,linestyle='-',zorder=-10,color='gray',label='other "Obs."')
+            axs[2,m].plot(cmip_0_700+cmip_700_bot,linewidth = 0.5,linestyle='-',zorder=-10,color='gray',label='other "obs."')
         else:
             axs[2,m].plot(cmip_0_700+cmip_700_bot,linewidth = 0.5,linestyle='-',zorder=-10,color='gray')
 
@@ -66,7 +66,7 @@ def plot_ohc():
     yearlist = post_OHCtot.columns.values.astype(int)
     
     axs[2,m].fill_between(yearlist, np.percentile(post_OHCtot.values,5, axis=0),
-                        np.percentile(post_OHCtot.values, 95, axis=0), linewidth=0.25,color='red', alpha=0.3,label='90 CI')
+                        np.percentile(post_OHCtot.values, 95, axis=0), linewidth=0.25,color='red', alpha=0.3,label='90 C.I.')
     
     axs[2,m].plot(yearlist,np.percentile(post_OHCtot.values,50, axis=0),color='red',label='Posterior mean')
     
@@ -81,7 +81,7 @@ def plot_post_erf():
     post_rf=pd.read_csv('results_csv/'+filename,
                         index_col=0)
     
-    axs[0,m].plot(post_rf['Median'],color='black',linewidth=1,label='Posteriori mean')
+    axs[0,m].plot(post_rf['Median'],color='black',linewidth=1,label='Posterior mean')
     axs[0,m].fill_between(post_rf.index, post_rf['5perc'],
                           post_rf['95perc'],
                           linewidth=0.25,
