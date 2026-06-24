@@ -22,6 +22,12 @@ Figure S4: plot_prior_rf_timeseries_allcomp_allmodels.py
 
 Figure S5: plot_all_tcr.py
 
+Figure S6-S10: plot_combined_results_selected.py 
+
+Figure S11: plot_combined_results_hadgem.py 
+
+Figure S12: plot_combined_results_noresm.py 
+
 
 All data in the results_csv catalouge will be made availible through the NIRD data archiving system as well as the original output from the estimation.
 
