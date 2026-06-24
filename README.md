@@ -12,7 +12,9 @@ Figure 3: plot_all_pattern.py
 
 Supplementary figures:
 
-Figure S1: plot_prior_rf_timeseries_allcomp_allmodels.py
+Figure S1: plot_ohc_compare_obs.py
+
+Figure S4: plot_prior_rf_timeseries_allcomp_allmodels.py
 
 
 
