@@ -16,6 +16,9 @@ Figure S1: plot_ohc_compare_obs.py
 
 Figure S2: plot_temperature_compare_obs.py
 
+Figure S3: observations/SOI/plot_soi_all.py
+
+
 Figure S4: plot_prior_rf_timeseries_allcomp_allmodels.py
 
 
