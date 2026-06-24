@@ -86,7 +86,7 @@ def plot_post_erf():
                           post_rf['95perc'],
                           linewidth=0.25,
                           color='black',
-                          alpha=0.3,label='90 CI')
+                          alpha=0.3,label='90 C.I.')
 
 
 

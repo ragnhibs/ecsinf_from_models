@@ -10,6 +10,12 @@ Figure 2: plot_combined_results_ens1.py
 Figure 3: plot_all_pattern.py
 
 
+Supplementary figures:
+
+Figure S1: plot_prior_rf_timeseries_allcomp_allmodels.py
+
+
+
 All data in the results_csv catalouge will be made availible through the NIRD data archiving system as well as the original output from the estimation.
 
 
